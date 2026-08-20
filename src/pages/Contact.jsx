@@ -53,13 +53,11 @@ export default function Contact() {
           </p>
         </div>
       </section>
-{/* Main Contact Section */}
+    {/* Main Contact Section */}
 <section id="contact-page" className="py-24 px-6 max-w-7xl mx-auto overflow-hidden space-y-16">
   
   {/* Top Grid: Left Side Contact Info & Right Side Form */}
-  <div className="grid lg:grid-cols-2 gap-12 items-start">
-    
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
     
     {/* Left Side: Contact Information (Slides in from Left) */}
     <div className="bg-white p-6 sm:p-10 md:p-12 rounded-3xl shadow-2xl border border-slate-200 animate-on-scroll slide-from-left h-full flex flex-col justify-between">
@@ -231,7 +229,6 @@ export default function Contact() {
       </div>
     </div>
 
-  </div>
   </div>
 
   {/* Bottom Section: Full Width Google Map */}
