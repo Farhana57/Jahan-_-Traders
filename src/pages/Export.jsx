@@ -82,52 +82,44 @@ const Export = () => {
       </section>
 
        {/* ================= EXPORT PROCESS SECTION ================= */}
-      <section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
-        <div className="text-center max-w-2xl mx-auto mb-16 transform transition-all duration-1000 ease-out opacity-0 translate-y-10 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
-          <p className="text-slate-600 text-base">We ensure seamless door-to-port and port-to-port international shipping services.</p>
-        </div>
+<section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+  <div className="text-center max-w-2xl mx-auto mb-16">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
+    <p className="text-slate-600 text-base">We ensure seamless door-to-port and port-to-port international shipping services.</p>
+  </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
-          
-          {/* Card 1: Slides in from the left */}
-          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-xl opacity-0 translate-x-[-30px] lg:translate-x-[-60px] animate-on-scroll flex flex-col justify-between">
-            <div>
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold transition-transform duration-300 hover:scale-110">1</div>
-              <h3 className="font-bold text-xl text-emerald-950 mb-3">Order & Inquiry</h3>
-              <p className="text-slate-600 text-sm">Client specifies requirements, quality, grading, and quantity for custom packaging.</p>
-            </div>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    {/* Card 1 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">1</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Order & Inquiry</h3>
+      <p className="text-slate-600 text-sm">Client specifies requirements, quality, grading, and quantity for custom packaging.</p>
+    </div>
 
-          {/* Card 2: Fades up with a slight delay */}
-          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-xl opacity-0 translate-y-10 animate-on-scroll flex flex-col justify-between" style={{ transitionDelay: '200ms' }}>
-            <div>
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold transition-transform duration-300 hover:scale-110">2</div>
-              <h3 className="font-bold text-xl text-emerald-950 mb-3">Quality Control</h3>
-              <p className="text-slate-600 text-sm">Rigorous inspection and moisture testing to meet international export benchmarks.</p>
-            </div>
-          </div>
+    {/* Card 2 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">2</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Quality Control</h3>
+      <p className="text-slate-600 text-sm">Rigorous inspection and moisture testing to meet international export benchmarks.</p>
+    </div>
 
-          {/* Card 3: Fades up with a longer delay */}
-          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-xl opacity-0 translate-y-10 animate-on-scroll flex flex-col justify-between" style={{ transitionDelay: '400ms' }}>
-            <div>
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold transition-transform duration-300 hover:scale-110">3</div>
-              <h3 className="font-bold text-xl text-emerald-950 mb-3">Secure Packaging</h3>
-              <p className="text-slate-600 text-sm">Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.</p>
-            </div>
-          </div>
+    {/* Card 3 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">3</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Secure Packaging</h3>
+      <p className="text-slate-600 text-sm">Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.</p>
+    </div>
 
-          {/* Card 4: Slides in from the right */}
-          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-xl opacity-0 translate-x-[30px] lg:translate-x-[60px] animate-on-scroll flex flex-col justify-between">
-            <div>
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold transition-transform duration-300 hover:scale-110">4</div>
-              <h3 className="font-bold text-xl text-emerald-950 mb-3">Global Delivery</h3>
-              <p className="text-slate-600 text-sm">Customs clearance, documentation handling, and timely container dispatch worldwide.</p>
-            </div>
-          </div>
+    {/* Card 4 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">4</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Global Delivery</h3>
+      <p className="text-slate-600 text-sm">Customs clearance, documentation handling, and timely container dispatch worldwide.</p>
+    </div>
 
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* ================= GLOBAL REACH / MARKETS SECTION ================= */}
       <section className="bg-emerald-950 text-white py-20 px-6 overflow-hidden">
