@@ -81,79 +81,98 @@ const Export = () => {
         </div>
       </section>
 
-      {/* ================= EXPORT PROCESS SECTION ================= */}
-      <section className="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
-        <div className="text-center max-w-2xl mx-auto mb-16 transform transition-all duration-1000 ease-out opacity-0 translate-y-10 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
-          <p className="text-slate-600 text-base">We ensure seamless door-to-port and port-to-port international shipping services.</p>
-        </div>
+       {/* ================= EXPORT PROCESS SECTION ================= */}
+<section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+  <div className="text-center max-w-2xl mx-auto mb-16">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
+    <p className="text-slate-600 text-base">We ensure seamless door-to-port and port-to-port international shipping services.</p>
+  </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
-          {/* Card 1: Slides in from the left */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-1000 ease-out opacity-0 translate-x-[-60px] animate-on-scroll">
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold">1</div>
-            <h3 className="font-bold text-xl text-emerald-950 mb-3">Order & Inquiry</h3>
-            <p className="text-slate-600 text-sm">Client specifies requirements, quality, grading, and quantity for custom packaging.</p>
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    {/* Card 1 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">1</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Order & Inquiry</h3>
+      <p className="text-slate-600 text-sm">Client specifies requirements, quality, grading, and quantity for custom packaging.</p>
+    </div>
 
-          {/* Card 2: Fades up with a slight delay */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-1000 ease-out opacity-0 translate-y-10 animate-on-scroll" style={{ transitionDelay: '200ms' }}>
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold">2</div>
-            <h3 className="font-bold text-xl text-emerald-950 mb-3">Quality Control</h3>
-            <p className="text-slate-600 text-sm">Rigorous inspection and moisture testing to meet international export benchmarks.</p>
-          </div>
+    {/* Card 2 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">2</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Quality Control</h3>
+      <p className="text-slate-600 text-sm">Rigorous inspection and moisture testing to meet international export benchmarks.</p>
+    </div>
 
-          {/* Card 3: Fades up with a longer delay */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-1000 ease-out opacity-0 translate-y-10 animate-on-scroll" style={{ transitionDelay: '400ms' }}>
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold">3</div>
-            <h3 className="font-bold text-xl text-emerald-950 mb-3">Secure Packaging</h3>
-            <p className="text-slate-600 text-sm">Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.</p>
-          </div>
+    {/* Card 3 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">3</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Secure Packaging</h3>
+      <p className="text-slate-600 text-sm">Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.</p>
+    </div>
 
-          {/* Card 4: Slides in from the right */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transform transition-all duration-1000 ease-out opacity-0 translate-x-[60px] animate-on-scroll">
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 font-bold">4</div>
-            <h3 className="font-bold text-xl text-emerald-950 mb-3">Global Delivery</h3>
-            <p className="text-slate-600 text-sm">Customs clearance, documentation handling, and timely container dispatch worldwide.</p>
-          </div>
+    {/* Card 4 */}
+    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">4</div>
+      <h3 className="font-bold text-xl text-emerald-950 mb-3">Global Delivery</h3>
+      <p className="text-slate-600 text-sm">Customs clearance, documentation handling, and timely container dispatch worldwide.</p>
+    </div>
 
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* ================= GLOBAL REACH / MARKETS SECTION ================= */}
       <section className="bg-emerald-950 text-white py-20 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-          {/* Left Side: Global Footprint (Slides in from the left) */}
-          <div className="transform transition-all duration-1000 ease-out opacity-0 translate-x-[-60px] animate-on-scroll">
+          {/* Left Side: Global Footprint */}
+          <div>
             <span className="inline-block bg-emerald-800 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Global Footprint</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Serving Clients Across Continents</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Serving Clients Across Continents</h2>
             <p className="text-slate-300 text-base leading-relaxed mb-6">
               Jahan Traders has established a robust international shipping network, supplying high-grade raw jute, yarn, sacks, and eco-friendly bags to international buyers.
             </p>
             <ul className="space-y-3 text-emerald-200">
-              <li className="flex items-center"><i className="fa-solid fa-check text-emerald-400 mr-2"></i> Strict adherence to global trade standards and compliance</li>
-              <li className="flex items-center"><i className="fa-solid fa-check text-emerald-400 mr-2"></i> Fast and transparent documentation (Bill of Lading, Certificate of Origin)</li>
-              <li className="flex items-center"><i className="fa-solid fa-check text-emerald-400 mr-2"></i> Trusted partnerships with leading global shipping liners</li>
+              <li className="flex items-start gap-3">
+                <i className="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i> 
+                <span>Strict adherence to global trade standards and compliance</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <i className="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i> 
+                <span>Fast and transparent documentation (Bill of Lading, Certificate of Origin)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <i className="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i> 
+                <span>Trusted partnerships with leading global shipping liners</span>
+              </li>
             </ul>
           </div>
 
-          {/* Right Side: Export Documentation Support (Slides in from the right) */}
-          <div className="bg-emerald-900 p-8 rounded-3xl border border-emerald-800 shadow-xl transform transition-all duration-1000 ease-out opacity-0 translate-x-[60px] animate-on-scroll">
-            <h3 className="text-2xl font-bold mb-4">Export Documentation Support</h3>
-            <p className="text-emerald-100 text-sm mb-6">We provide comprehensive paperwork required by destination customs authorities to ensure hassle-free port clearance.</p>
-            <div className="grid grid-cols-2 gap-4 text-sm font-semibold">
-              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center">Commercial Invoice</div>
-              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center">Packing List</div>
-              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center">Certificate of Origin</div>
-              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center">Bill of Lading (B/L)</div>
+          {/* Right Side: Export Documentation Support */}
+          <div className="bg-emerald-900 p-6 sm:p-8 rounded-3xl border border-emerald-800 shadow-2xl">
+            <h3 className="text-2xl font-bold mb-3 text-white">Export Documentation Support</h3>
+            <p className="text-emerald-100 text-sm mb-6 leading-relaxed">
+              We provide comprehensive paperwork required by destination customs authorities to ensure hassle-free port clearance.
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold">
+              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center text-white hover:bg-emerald-800 transition-colors shadow-sm">
+                Commercial Invoice
+              </div>
+              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center text-white hover:bg-emerald-800 transition-colors shadow-sm">
+                Packing List
+              </div>
+              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center text-white hover:bg-emerald-800 transition-colors shadow-sm">
+                Certificate of Origin
+              </div>
+              <div className="bg-emerald-950 p-4 rounded-xl border border-emerald-800 text-center text-white hover:bg-emerald-800 transition-colors shadow-sm">
+                Bill of Lading (B/L)
+              </div>
             </div>
           </div>
 
         </div>
       </section>
-
     </div>
   );
 };
