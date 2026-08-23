@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowRight, Package, Recycle, TrendingUp } from "lucide-react";
 
-// --- প্রোডাক্টের সেন্ট্রাল ডাটাবেস ---
+// --- লোকাল অ্যাসেট থেকে ছবি ইমপোর্ট করা হলো ---
+import aboutImg from "../assets/about.jpeg";
+import bagImg from "../assets/bag.jpg";
+import juteBagImg from "../assets/jute-bag-.jpg";
+import juteRopeImg from "../assets/jute-rope-imp.jpg";
+import juteImg from "../assets/jute.jpg";
+
+// --- প্রোডাক্টের সেন্ট্রাল ডাটাবেস (সঠিক ছবিসহ) ---
 const productsData = {
   "jute-sacks": {
     title: "Eco-Friendly Jute Sacks & Bags",
@@ -15,7 +22,7 @@ const productsData = {
       "Customizable sizes and printing available",
       "Heavy-duty durability for bulk transport",
     ],
-    image: "https://images.unsplash.com/photo-1457414104202-9d4b4908f285?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SnV0ZSUyMFNhY2tzJTIwJTI2JTIwQmFnc3xlbnwwfHwwfHx8MA%3D%3D",
+    image: juteBagImg,
     applications: ["Agricultural Produce (Rice, Coffee)", "Industrial Goods", "Eco-Shopping"],
   },
   "jute-yarn": {
@@ -29,7 +36,7 @@ const productsData = {
       "Eco-friendly alternative to synthetic twine",
       "Custom winding options (spool, ball, cops)",
     ],
-    image: "https://images.unsplash.com/photo-1637517608595-d4d502527cdc?w=800&auto=format&fit=crop&q=60",
+    image: juteRopeImg,
     applications: ["Carpet Weaving", "Packaging & Baling", "Crafting & DIY Projects"],
   },
   "geotextiles": {
@@ -43,7 +50,7 @@ const productsData = {
       "100% Natural & Environmentally Safe",
       "Cost-effective slope protection",
     ],
-    image: "https://images.unsplash.com/photo-1612676777268-24594d85b631?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SnV0ZSUyMEdlb3RleHRpbGVzfGVufDB8fDB8fHww",
+    image: juteImg,
     applications: ["Roadway Slope Stabilization", "Riverbank Protection", "Landscaping"],
   },
   "handicrafts": {
@@ -57,7 +64,7 @@ const productsData = {
       "Durable and eco-friendly gift options",
       "Enhances home decor with a natural touch",
     ],
-    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&auto=format&fit=crop&q=60",
+    image: bagImg,
     applications: ["Home Decor", "Retail Shopping Bags", "Unique Gifts"],
   },
 };
@@ -187,9 +194,11 @@ export default function ProductDetails() {
         </div>
 
         {/* Other Products Mini Section */}
-        <div className="border-t border-slate-200 pt-16">
-          <h2 className="text-3xl font-extrabold text-center text-slate-900 mb-12">Explore Other Jute Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="border-t border-slate-200 pt-20 mt-20 bg-slate-100 rounded-3xl px-6">
+          <h2 className="text-4xl font-extrabold text-center text-slate-950 mb-16">Explore Other Premium Jute Products</h2>
+          
+          {/* গ্রিড লেআউট */}
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 pb-20">
             {Object.entries(productsData)
               .filter(([key]) => key !== productId)
               .slice(0, 3)
@@ -197,17 +206,19 @@ export default function ProductDetails() {
                 <Link 
                   key={key} 
                   to={`/products/${key}`} 
-                  className="bg-slate-50 rounded-3xl p-6 text-center border border-slate-200 group hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+                  className="bg-white rounded-3xl p-8 text-center border border-slate-200 group hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 block overflow-hidden"
                 >
-                  <div className="overflow-hidden rounded-full w-24 h-24 mx-auto mb-5 border-4 border-slate-200 shadow-sm">
+                  <div className="aspect-[4/3] w-full overflow-hidden rounded-3xl mb-6 border-4 border-white shadow-lg group-hover:shadow-emerald-100 transition-shadow">
                     <img 
                       src={value.image} 
                       alt={value.title} 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{value.title}</h4>
-                  <p className="text-sm text-emerald-700 mt-3 font-semibold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  
+                  <h4 className="text-2xl font-bold text-slate-950 group-hover:text-emerald-700 transition-colors leading-tight">{value.title}</h4>
+                  
+                  <p className="text-base text-emerald-700 mt-5 font-semibold inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
                     View Details →
                   </p>
                 </Link>
