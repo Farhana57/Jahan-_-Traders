@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+    import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, CheckCircle2, ShieldCheck, Globe, Truck, Award, 
@@ -9,13 +9,21 @@ import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 
+// প্রোডাক্ট/গ্যালারি সেকশনের ছবিগুলো ইম্পোর্ট করা হলো
+import customJuteBulkImg from "../assets/custom-jute-bulk.jpg";
+import juteSacksImg from "../assets/jute-sacks.jpg";
+import sustainableGeoImg from "../assets/sustainable-jute-geotextiles.jpg";
+import sacksBagImg from "../assets/sacks-bag.jpg";
+import textylesImg from "../assets/textyles.jpg";
+import preYearnImg from "../assets/pre-yearn.jpg";
+
 const slides = [hero1, hero2, hero3];
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
 
-  // Intersection Observer hook for scroll animations
+     // Intersection Observer hook for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,15 +34,21 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.05 }
     );
 
     const animatedElements = document.querySelectorAll(".animate-on-scroll");
-    animatedElements.forEach((el) => observer.observe(el));
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add("opacity-100", "translate-x-0", "translate-y-0");
+        el.classList.remove("opacity-0", "-translate-x-20", "translate-x-20", "translate-y-10");
+      }
+    });
 
     return () => observer.disconnect();
   }, []);
-
   // ================= AUTO HERO SLIDER =================
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -309,13 +323,14 @@ export default function Home() {
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {[
-      { title: "Jute Sacks & Bags", desc: "Durable packaging bags for agricultural and industrial use.", img: "https://images.unsplash.com/photo-1465176728568-7da7e336b1e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SnV0ZSUyMFNhY2tzJTIwJTI2JTIwQmFnc3xlbnwwfHwwfHx8MA%3D%3D" },
-      { title: "Jute Yarn & Twine", desc: "High tensile strength yarn suitable for diverse industries.", img: "https://images.unsplash.com/photo-1642693252450-a249b8dcaae5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8SnV0ZSUyMFlhcm4lMjAlMjYlMjBUd2luZXxlbnwwfHwwfHx8MA%3D%3D" },
-      { title: "Jute Geotextiles", desc: "Eco-friendly technical textiles for soil erosion control.", img: "https://images.unsplash.com/photo-1610428011552-734764c290ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SnV0ZXxlbnwwfHwwfHx8MA%3D%3D" },
-      { title: "Jute Hessian Cloth", desc: "Finely woven light fabric used for wrapping and décor.", img: "https://images.unsplash.com/photo-1560026234-3174f4958ce7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fEp1dGUlMjBIZXNzaWFuJTIwQ2xvdGh8ZW58MHx8MHx8fDA%3D" },
-      { title: "Jute Handicrafts", desc: "Customized aesthetic handmade products and home decors.", img: "https://images.unsplash.com/photo-1549057049-7bee8a1c41f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SnV0ZSUyMFlhcm4lMjAlMjYlMjBUd2luZXxlbnwwfHwwfHx8MA%3D%3D" },
-      { title: "Custom Jute Bulk", desc: "Bulk orders tailored with custom packaging for international export.", img: "https://plus.unsplash.com/premium_photo-1670044659304-644b17897a52?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q3VzdG9tJTIwSnV0ZSUyMEJ1bGt8ZW58MHx8MHx8fDA%3D" },
-    ].map((item, idx) => {
+  { title: "Jute Sacks & Bags", desc: "Durable packaging bags for agricultural and industrial use.", img: juteSacksImg },
+  { title: "Jute Yarn & Twine", desc: "High tensile strength yarn suitable for diverse industries.", img: preYearnImg },
+  { title: "Jute Geotextiles", desc: "Eco-friendly technical textiles for soil erosion control.", img: sustainableGeoImg },
+  { title: "Jute textile", desc: "Finely woven light fabric used for wrapping and décor.", img: textylesImg },
+  { title: "Jute Handicrafts", desc: "Customized aesthetic handmade products and home decors.", img: sacksBagImg },
+  { title: "Custom Jute Bulk", desc: "Bulk orders tailored with custom packaging for international export.", img: customJuteBulkImg },
+]
+    .map((item, idx) => {
       // জোড় কার্ডগুলো বাম দিক থেকে (-translate-x-20) এবং বেজোড় কার্ডগুলো ডান দিক থেকে (translate-x-20) স্লাইড করবে
       const slideDirectionClass = idx % 2 === 0 ? "-translate-x-20" : "translate-x-20";
       

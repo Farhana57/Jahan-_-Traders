@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import hero1Img from '../assets/hero1.jpg'; 
+import premiumBagImg from '../assets/premium-jute-bag.jpg';
 const Gallery = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -7,7 +8,7 @@ const Gallery = () => {
     {
       title: "Our Visual Showcase",
       subtitle: "Explore our complete collection of high-quality eco-friendly jute products, manufacturing process, and global export shipments.",
-      bg: "https://images.unsplash.com/photo-1567708415513-6ba3822eaec1?w=1600&auto=format&fit=crop&q=80"
+      bg: hero1Img 
     },
     {
       title: "Global Jute Excellence",
@@ -102,18 +103,17 @@ const Gallery = () => {
         {/* Gallery Grid (9 Items) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            {/* Item 1 */}
-            <div className="group relative rounded-3xl overflow-hidden shadow-md bg-white border border-slate-100 slide-from-right flex flex-col hover:shadow-2xl transition-shadow duration-300">
-                <div className="h-64 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1567708415513-6ba3822eaec1?w=600&auto=format&fit=crop&q=80" alt="Jute Bags" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <span className="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Eco Product</span>
-                </div>
-                <div className="p-6 bg-white flex flex-col flex-grow">
-                    <h3 className="text-emerald-950 text-xl font-bold mb-2">Premium Jute Bags</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">Durable and sustainable shopping, promotional, and packaging bags for global retail.</p>
-                </div>
-            </div>
-
+           {/* Item 1 */}
+<div className="group relative rounded-3xl overflow-hidden shadow-md bg-white border border-slate-100 slide-from-right flex flex-col hover:shadow-2xl transition-shadow duration-300">
+    <div className="h-64 overflow-hidden relative">
+        <img src={premiumBagImg} alt="Jute Bags" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        <span className="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Eco Product</span>
+    </div>
+    <div className="p-6 bg-white flex flex-col flex-grow">
+        <h3 className="text-emerald-950 text-xl font-bold mb-2">Premium Jute Bags</h3>
+        <p className="text-slate-600 text-sm leading-relaxed">Durable and sustainable shopping, promotional, and packaging bags for global retail.</p>
+    </div>
+</div>
             {/* Item 2 */}
             <div className="group relative rounded-3xl overflow-hidden shadow-md bg-white border border-slate-100 slide-from-right flex flex-col hover:shadow-2xl transition-shadow duration-300" style={{ transitionDelay: '100ms' }}>
                 <div className="h-64 overflow-hidden relative">
